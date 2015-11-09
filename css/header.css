@@ -1,0 +1,283 @@
+body {
+	background: url(../images/bg.png);
+	margin: 0px;
+}
+
+h1 {
+	font-family: ralewaythin;
+	font-weight: 400;
+	color: #333;
+	margin-bottom: 0px;
+	font-size: 40px;
+}
+
+h2 {
+	font-family: ralewaythin;
+	font-weight: 400;
+	color: #979695;
+	margin-bottom: 0px;
+	font-size: 24px;
+}
+
+h3 {
+	margin-top: 0px;
+	font-weight: 200;
+	font-size: 25px;
+}
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
+p, a, h3, h4 {
+	font-family: gudearegular;
+	color: #979695;
+}
+
+a, h3 {
+	color: #979695;
+}
+
+h5 {
+	font-family: ralewaythin;
+	font-size: 14px;
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+
+input[type="button"] {
+	cursor: pointer;
+	color: #464646;	
+}
+
+.center-wrapper {
+	width: 1020px;
+	margin: 0 auto;
+	height: 100%;
+	*border: 1px solid black;
+}
+
+.current, h5 {
+	color: #a6b95b;
+}
+
+header {
+	margin-top: 56px;
+	height: 214px;
+	*border: 1px solid black;
+	background-image: url(../images/header-bg.png);
+	background-image: cover;
+}
+
+header>nav {
+	position: relative;
+	top: 46px;
+	height: 28px;
+	margin: 0 auto;
+	width: 940px;
+	*border: 1px solid black;
+}
+
+header>nav>a {
+	position: relative;
+	top: 2.5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-right: 35px;
+	vertical-align: middle;	
+}
+
+header>nav>a:first-child {
+	color: #a6b95b;
+}
+
+header>nav>form {
+	position: relative;
+	top: 0px;
+	float: right;
+	height: 25px;
+	width: 218px;
+	border: 1px solid #cdc5bb;
+	background: #eee6db;
+}
+
+header>nav>form>input[type=text] {
+	background: #eee6db;
+	width: 188px;
+	height: 23px;
+	border: none;
+}
+
+header>nav>form>input[type=submit] {
+	position: relative;
+	margin-top: 2.5px;
+	margin-right: 2px;
+	height: 20px;
+	width: 20px;
+	background: url(../images/icons/search_icon.png) no-repeat;
+	border: none;
+	vertical-align: middle;
+	float: right;
+}
+
+/*Dropdown menu style*/
+
+.menu-items {
+	position: absolute;
+	left: 85px;
+	width: 140px;
+	height: 120px;
+	padding-left:0px;
+	margin-top: 15px; 
+	display: none;
+	z-index: 10;
+}
+
+.menu-items>li:hover{
+	background-color: #cdc5bb;
+}
+
+.menu-items>li>a {
+	position: relative;
+	text-decoration: none;
+	vertical-align: middle;
+	font-size: 14px;
+	top: 6px;
+}
+
+.menu-items>li>a:hover {
+	text-decoration: none;
+	color: white;
+}
+	
+.menu-items>li {
+	padding-left: 10px;
+	text-align: left;
+	display: none; /*ОТОБРАЖЕНИЕ НА СТРАНИЦЕ*/
+	list-style: none;
+	background: #efe8de;
+	width: 120px;
+	height: 30px;
+	text-decoration: none;
+	border-top: 1px solid #cdc5bb;
+	border-bottom: 1px solid #cdc5bb;
+	font-size: 12px;
+}
+/*//////////////////*/
+.header-top-wrapper {
+	width: 940px;
+	*border: 1px solid red;
+	height: 110px;
+	margin: 0 auto;
+}
+
+.header-left {
+	width: 30%;
+	float: left;
+	*border: 1px solid black;
+	height: 107px;
+}
+
+.header-left>h1 {
+	position: relative;
+	margin-top: 35px;
+	padding-left: 0px;
+	margin-left: -5px;	
+}
+
+.header-left>h3 {
+	margin-top: 0px;
+	padding-left: 0px;
+	margin-left: -2px	
+}
+
+.header-center {
+	width: 40%;
+	float: left;
+	position: relative;
+	top: 92px;	
+	*border: 1px solid black;	
+}
+
+.header-center>nav{
+	width: 335px;
+	margin: 0 auto;
+	font-size: 14px;
+	font-family: gudearegular;
+	color: #979695;
+}
+
+header>.header-bottom-nav>a {
+	padding-left: 2px;
+}
+
+header>.header-bottom-nav>a:hover, .new-in-title:hover {
+	background-color: #cdc5bb;
+}
+
+header>.header-bottom-nav>img {
+	position: relative;
+	left: -35px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.new-in-title {
+	background-position: 54px;
+    cursor: pointer;
+}
+
+.header-center>nav>span {
+	padding-left: 52px;
+}
+
+.header-center>nav>a {
+	text-decoration: none;
+}
+
+.header-right {
+	position: relative;
+	top: 75px;
+	width: 30%;
+	float: right;
+	height: 32px;
+	*border: 1px solid black;
+	font-family: ralewaylight;
+	font-size: 14px;
+}
+
+.header-right>a {
+	text-decoration: none;
+	float: left;
+}
+
+.header-right>p {
+	position: relative;
+	width: 170px;
+	margin-top: 0px;
+	margin-left: 100px;
+}
+
+.header-right>span {
+	float: left;
+	color: #979695;
+	margin-left: 10px;
+}
+
+.basket-link{
+	background: url('../images/icons/fabrique-sprites.png') 0 0 no-repeat;
+    padding-left: 0px;
+    margin-top: 6px;
+	width: 32px;
+	height: 23px;
+	background-position: 0px -67px;
+	margin-left: 60px;
+	margin-right: 5px;
+	opacity: 0.6;
+}
+
+.username{
+	font-family: ralewaylight;
+	margin-right: 5px;
+	margin-left: 5px;
+}

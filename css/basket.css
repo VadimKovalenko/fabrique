@@ -1,0 +1,261 @@
+p {
+	font-size: 14px;
+}
+
+hr {
+	background: url(../images/block-home/separate.png);
+	height: 2px;
+	border: none;
+	margin: 0px;
+}
+
+
+h3 {
+	font-family: ralewaylight;
+	color: #979695;
+	font-size: 17px;
+}
+
+.main {
+	margin-top: 14px;
+	height: 823px;
+	*border: 1px solid black;
+	background-image: url(../images/main-bg.png);
+	background-image: cover;
+}
+
+.main-first {
+	position: relative;
+	*border: 1px solid black;
+	width: 940px;
+	height: 917px;
+	top: 40px;
+	margin: 0 auto;
+}
+
+.main-first>p:first-of-type {
+	margin-bottom: 0px;
+}
+
+.basket {
+	height: 404px;
+	width: 895px;
+	*border: 1px solid #d8d8d8;
+	overflow: auto;
+	margin-bottom: 68px;
+}
+
+.article-row {
+	width: 865px;
+	height: 103px;
+	*border: 1px solid black;
+}
+
+.row-cell {
+	float: left;
+	font-family: gudearegular;
+	color: #979695;
+}
+
+.cell-select {
+	margin-top: 18px;
+	float: left;
+}
+
+.article-row :nth-child(2) {
+	padding-left: 21px;
+	margin-top: 32px;
+	width: 219px;
+}
+
+.article-row :nth-child(3) {
+	margin-top: 32px;
+	width: 165px;
+}
+
+.article-row :nth-child(4) {
+	margin-right: 115px;
+}
+
+.article-row :nth-child(4)>select {
+	width: 50px;	
+}
+
+.article-row :nth-child(5) {
+	margin-top: 32px;
+	width: 130px;	
+}
+
+.article-row :last-child {
+	margin-top: 13px;
+	*float: right;
+}
+
+
+.delete-button {
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/icons/cancel.png);
+	background-size: cover;
+	background-color: transparent;
+	border: none;
+}
+
+#image_art1, #image_art2, #image_art3, #image_art4, #image_art5, #image_art6, #image_art7, #image_art8 {
+	width: 124px;
+	height: 83px;
+	border: 1px solid #e7e7e7 ;
+	background-size: cover;	
+}
+
+#image_art1 {
+	background-image: url(../images/block-home/img1.png);
+}
+
+#image_art2 {
+	background-image: url(../images/block-home/img2.png);	
+}
+
+#image_art3 {
+	background-image: url(../images/block-home/img3.png);
+}
+
+#image_art4 {
+	background-image: url(../images/block-home/img4.png);	
+}
+
+#image_art5 {
+	background-image: url(../images/block-home/img5.png);	
+}
+
+#image_art6 {
+	background-image: url(../images/block-home/img6.png);
+}
+
+#image_art7 {
+	background-image: url(../images/block-home/img7.png);
+}
+
+#image_art8 {
+	background-image: url(../images/block-home/img8.png);
+}
+
+.separate-line-1 {
+	width:700px;
+	float: left;
+	margin-top: 12px;
+	margin-bottom: 17px;
+}
+
+.main-first-right {
+	*border: 1px solid black;
+	width: 240px;
+	height: 60px;
+	float: right;
+}
+
+.main-first-right>p {
+	margin-bottom: 0px;
+	margin-top: 26px;
+	margin-left: 20px;
+}
+
+.main-first-right>p>a {
+	text-decoration: none;	
+}
+
+.main-first>form {
+	float: left;
+	margin-top: 22px;
+	margin-left: 93px;
+	border: 1px solid #dadada;
+	*background: url(../images/icons/mailto_icon.png) right no-repeat;
+	background-color: white;
+	width: 193px;
+	height: 22px;
+}
+
+.main-first>form>input[type="submit"] {
+	border: none;
+	background: url(../images/icons/mailto_icon.png) right no-repeat;
+	width: 18px;
+	height: 18px;
+	background-size: cover;
+	margin-top: 2px;
+	margin-left: 4px;
+}
+
+.separate-line-1:nth-of-type(2) {
+	margin-bottom: 21px;
+}
+
+.basket-header {
+	margin-top: 30px;
+	width: 940px;
+	height: 35px;
+	border: 1px solid transparent;
+}
+
+.basket-header>p {
+	font-family: ralewaylight;
+	font-size: 16px;
+	float: left;
+	padding-right: 8%;
+	text-transform: uppercase;
+}
+
+.proceed-to, .update {
+	height: 22px;
+	font-family: ralewaylight;
+	color: #464646;
+	border: 1px solid #cfc7bd;
+	background-color: #f0ece7;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	background-size: 17px 17px;	
+}
+
+.proceed-to {
+	background-image: url(../images/icons/bag_white.png);
+	width: 182px;
+	margin-left: 20px;
+	background-position: 4%;	
+}
+
+.discount-code {
+	width: 168px;
+	border: none;
+	height: 20px;
+	float: left;
+}
+
+.total-value {
+	float: right;
+	margin-top: 0px;
+	margin-right: 111px;
+	margin-bottom: 35px;
+}
+
+.summ, .currency_all {
+	font-family: ralewaylight;
+	font-size: 18px;
+}
+
+.update {
+	float: left;
+	width: 138px;
+	background-image: url(../images/icons/update.png);
+	background-position: 7%;
+	margin-top: 22px;
+	margin-left: 20px;
+}
+
+.main-first>h3 {
+	float: left;
+	margin-top: 23px;
+}
+
+.separate-line-2 {
+	width: 940px;
+	margin-top: 237px;
+}

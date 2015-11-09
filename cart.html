@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fabrique</title>
+	<link href="images/icons/icon.png" rel="icon">
+	<!--<link href = "css/home-css.css" rel = "stylesheet"/>-->
+	<link href = "css/bottom.css" rel = "stylesheet"/>
+	<link href = "css/header.css" rel = "stylesheet"/>
+	<link href = "css/basket.css" rel = "stylesheet"/>
+	<link href = "css/totop.css" rel = "stylesheet">
+	<link href = "css/fonts.css" rel = "stylesheet">	
+	<script src = "scripts/jquery-1.7.1.min.js"></script>
+	<script src = "scripts/easing.js"></script>
+	<script src = "scripts/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="scripts/jQueryRotate.js"></script>
+	<script>
+	/*Запускаем слайдер*/
+	$(document).ready(function() {
+		$('#slider').cycle({ 
+			fx: 'fade',
+			random: 1
+		}); 
+	});
+	</script>
+	<!-- UItoTop plugin -->
+	<script src="scripts/jquery.ui.totop.js" type="text/javascript"></script>
+	<!-- Starting the plugin -->
+	<script>
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/	
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!--Выпадающее меню-->
+	<script>
+		$(document).ready(function(){
+				$(".new-in-title, .drop-down-arrow").click(function() {						
+					$("li").fadeIn(1000);
+					$(".menu-items").slideToggle("slow");
+					});
+
+				var value = 0;	
+				$(".new-in-title, .drop-down-arrow").rotate({ 
+				bind: 
+				 { 
+					click: function(){
+						value +=180;
+						$(".drop-down-arrow").rotate({ animateTo:value})
+					}
+				 } 
+			   
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class = "center-wrapper">
+		<header>
+			<div class = "header-top-wrapper">
+				<section class = "header-left">
+					<h1>Fabrique</h1>
+					<h3>fine furnishings</h3>
+				</section>
+				<section class = "header-center">
+					<nav>
+						<a href = "#">Log in </a>|
+						<a href = "#">Register </a>|
+						<a href = "#">Wishlist </a>|
+						<a href = "#">FAQ</a>
+						<span>Currency:</span>
+						<a href = "#"> £ </a>
+						<a href = "#"> $ </a>
+						<a href = "#"> € </a>
+					</nav>
+				</section>
+				<section class = "header-right">
+					<a href = "basket.html" class = "basket-link">
+						<img src="images/icons/bag_black.png" alt="basket" class="">
+					</a>
+					<span>WELCOME</span>
+					<a class="current username">YOURNAME</a>
+					<p><a class="current">&nbsp; <span id="items_count">0</span></a> items</p>
+				</section>
+			</div>
+			<nav class = "header-bottom-nav">
+				<a href = "index.html">Home</a>
+				<a href = "#" class = "new-in-title">New in</a>
+				<img class = "drop-down-arrow" src = "images/icons/drop_down_1.png"/>
+						<ul class="menu-items">
+							<li><a href="">CURTAINS</a></li>
+							<li><a href="">CARPETS</a></li>
+							<li><a href="">RUGS</a></li>
+							<li><a href="">BEDDING</a></li>
+						</ul>
+				<a href = "#">Sale</a>
+				<a href = "#">Flooring</a>
+				<a href = "#">Curtains</a>
+				<a href = "#">Bedding</a>
+				<a href = "#">Contact us</a>
+				<form>
+					<input type = "text" class = "search" placeholder = "Search..."/>
+					<input type = "submit" value = ""/>
+				</form>
+			</nav>
+		</header>
+		<section class = "main">
+			<div class = "main-first">
+				<p>Home | <span class = "current">Basket</span></p>
+				<div class = "main-first-right">
+					<input type = "button" class = "proceed-to" value = "Proceed to Checkout"/>
+					<p><a href = "home.html" class = "current">Continue Shopping ></a></p>
+				</div>
+				<h2>Your basket</h2>
+				<hr class = "separate-line-1"/>	
+				<div class = "basket-header">
+					<p>Preview</p>
+					<p>Product name</p>
+					<p>Unit price</p>
+					<p>Quantity</p>
+					<p>Subtotal</p>
+					<p>Del</p>
+				</div>
+				<div class = "basket" id = "basket">
+				</div>
+				<hr class = "separate-line-1"/>
+				<p class = "total-value">Total: <span class="currency_all">£</span><span id="price" class="summ"></span></p>
+				<h3>Your total order details :</h3>
+				<form>
+					<input type = "text" class = "discount-code" placeholder = "Discount Code.."/>
+					<input type = "submit" value = "">
+				</form>
+				<a href = "basket.html"><input type = "button" class = "update" value = "Update Basket"/></a>
+				<div class = "main-first-right">
+					<input type = "button" class = "proceed-to" value = "Proceed to Checkout"/>
+					<p><a href = "home.html" class = "current">Continue Shopping ></a></p>
+				</div>
+				<hr class = "separate-line-2"/>	
+			</div>
+		</section>
+		<section class = "bottom">
+			<div class = "bottom-center">
+				<div>
+					<h2>Information</h2>
+						<ul>
+							<li>Contact Us</li>
+							<li>Delivery</li>
+							<li>Returns</li>
+							<li>Terms and Conditions</li>
+							<li>Privacy Policy</li>
+							<li>About Us</li>
+						</ul>
+				</div>
+				<div>
+					<h2>Your account</h2>
+						<ul>
+							<li>Log In</li>
+							<li>Create an Account</li>
+							<li>Order History</li>
+							<li>Wish List</li>
+							<li>Cancel Account</li>
+							<li>Newsletter Subscriptions</li>
+						</ul>
+				</div>
+				<div>
+					<h2>Contacts</h2>
+					<p>Fabrique Fine Furnishing
+					<br/>
+					308-310 Somewhere Road,
+					<br/>
+					Devon,  PL9 1DD.
+					<br/>
+					<br/>
+					Telephone: +44 01752 000000
+					E-mail: <u>mail@yoursite.com</u></p>
+				</div>
+				<div class = "free-delivery">
+					<h2>Free delivery</h2>
+					<h5>On all orders over £19.99</h5>
+					<p>Valid on all of our stocked items.</p>
+					<img src = "images/icons/paypal.png" alt = "paypal"/>
+					<img src = "images/icons/Visa.png" alt = "visa"/>
+					<img src = "images/icons/Mastercard.png" alt = "mastercard"/>
+					<img src = "images/icons/Discover.png" alt = "discover"/>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class = "footer-center">
+				<div>
+					<h2>Fabrique</h2>
+					<h4>Fine furnishings</h4>
+					<p>&copy; All Rights Reserved</p>
+				</div>
+				<div>
+					<img src = "images/icons/Facebook.png" alt = "facebook"/>
+					<img src = "images/icons/Twitter.png" alt = "twitter"/>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src = "scripts/basket.js"></script>
+</body>
+</html>
