@@ -81,6 +81,13 @@ h3 {
 	width: 50px;	
 }
 
+.article-row :nth-child(4)>select>option {
+	width: 50px;	
+	float: left;
+	padding-left: 3px;
+	margin: 0px;
+}
+
 .article-row :nth-child(5) {
 	margin-top: 32px;
 	width: 130px;	
