@@ -1,0 +1,293 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fabrique</title>
+	<link href="images/icons/icon.png" rel="icon">
+	<link href = "css/bottom.css" rel = "stylesheet"/>
+	<link href = "css/header.css" rel = "stylesheet"/>
+	<link href = "css/product.css" rel = "stylesheet"/>
+	<link href = "css/totop.css" rel = "stylesheet">
+	<link href = "css/fonts.css" rel = "stylesheet">	
+	<script src = "scripts/jquery-1.7.1.min.js"></script>
+	<script src = "scripts/easing.js"></script>
+	<script src = "scripts/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="scripts/jQueryRotate.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="scripts/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">	
+	<script>
+	/*Запускаем слайдер*/
+	$(document).ready(function() {
+		$('#slider').cycle({ 
+			fx: 'fade',
+			random: 1
+		}); 
+	});
+	</script>
+	<!-- UItoTop plugin -->
+	<script src="scripts/jquery.ui.totop.js" type="text/javascript"></script>
+	<!-- Starting the plugin -->
+	<script>
+		$(document).ready(function() {
+			/*
+			var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/	
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!--Выпадающее меню-->
+	<script>
+		$(document).ready(function(){
+				$(".new-in-title, .drop-down-arrow").click(function() {						
+					$("li").fadeIn(1000);
+					$(".menu-items").slideToggle("slow");
+					});
+
+				var value = 0;	
+				$(".new-in-title, .drop-down-arrow").rotate({ 
+				bind: 
+				 { 
+					click: function(){
+						value +=180;
+						$(".drop-down-arrow").rotate({ animateTo:value})
+					}
+				 } 
+			   
+			});
+		});
+	</script>
+	<!--Fancybox-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+				openEffect : 'none',
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class = "center-wrapper">
+		<header>
+			<div class = "header-top-wrapper">
+				<section class = "header-left">
+					<h1>Fabrique</h1>
+					<h3>fine furnishings</h3>
+				</section>
+				<section class = "header-center">
+					<nav>
+						<a href = "#">Log in </a>|
+						<a href = "#">Register </a>|
+						<a href = "#">Wishlist </a>|
+						<a href = "#">FAQ</a>
+						<span>Currency:</span>
+						<a href = "#"> £ </a>
+						<a href = "#"> $ </a>
+						<a href = "#"> € </a>
+					</nav>
+				</section>
+				<section class = "header-right">
+					<a href = "cart.html" class = "basket-link">
+						<!--<img src="images/icons/bag_black.png" alt="basket" class="">-->
+					</a>
+					<span>WELCOME</span>
+					<a class="current username">YOURNAME</a>
+					<p><a class="current">&nbsp; <span id="items_count">0</span></a> items</p>
+				</section>
+			</div>
+			<nav class = "header-bottom-nav">
+				<a href = "index.html">Home</a>
+				<a href = "#" class = "new-in-title">New in</a>
+				<img class = "drop-down-arrow" src = "images/icons/drop_down_1.png"/>
+						<ul class="menu-items">
+							<li><a href="">CURTAINS</a></li>
+							<li><a href="">CARPETS</a></li>
+							<li><a href="">RUGS</a></li>
+							<li><a href="">BEDDING</a></li>
+						</ul>
+				<a href = "#">Sale</a>
+				<a href = "#">Flooring</a>
+				<a href = "#">Curtains</a>
+				<a href = "#">Bedding</a>
+				<a href = "#">Contact us</a>
+				<form>
+					<input type = "text" class = "search" placeholder = "Search..."/>
+					<input type = "submit" value = ""/>
+				</form>
+			</nav>
+		</header>
+		<section class = "main">
+			<div class = "main-first">
+				<p>Home | Royale Curtains</p>
+				<section class = "main-left">
+				<h2 class = "item-title">Royale Curtains</h2>
+				<h2 class = "price">£<span id = "article-price">159.99</span></h2>
+				<hr class  = "main-left-hr"/>
+				<section class = "main-img-container">
+					<a class="fancybox-effects-c" href="images/block-home/img5.png" title="Royale Curtains">
+						<img src = "images/block-home/img5.png"/>
+					</a>	
+					<img src = "images/block-home/img5.png"/>
+					<img src = "images/block-home/img5.png"/>
+				</section>
+				<section class = "main-description">
+					<div class = "text-description">
+						<p>
+						A range of colours compliment what have to be the thickest curtains we have ever seen. As soft as velvet and available in a range of sizes.</p>
+						<p>A set of 6 bath sheets each weighing 250gm and measuring 100cm
+						x 160cm available in white only. Super high quality,
+						incredibly soft and dense.
+						</p>
+						<span class = "current">More details</span>
+						<div class="styled-select cell-select" id = "select_art1">
+							<select id="select_quantity" onChange="CalcSum();" placeholder = "Quantity:">
+								<option value="1" selected="">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>		
+							</select>
+							<p>Total: <span class="currency_all">£</span><span id="price" class="summ"></span></p>
+						</div>
+						<input type = "button" class = "basket-button" value = " Add to Basket" onClick = "ObjParse(4)";/>
+						<input type = "button" value = "Add to Wishlist"/>
+					</div>
+				</section>
+				<hr/>
+				<div class = "main-bottom">
+					<h2 class = "more-details-title">More details</h2>
+				 	<nav class = "main-left-nav">
+						<a href = "#">More info</a>
+						<a href = "#">Data Sheet</a>
+						<a href = "#">Reviews (2)</a>
+					</nav> 
+ 					<p>Fusce ac diam augue. Class aptent taciti sociosqu ad litora torquent per
+					conubia nostra, per inceptos himenaeos. Donec fringilla semper mollis.
+					Aliquam tempus, erat pretium dignissim dictum, nisl nisi porta libero, nec.</p>
+
+					<p>Suspendisse commodo augue a erat facilisis quis tempor tortor scelerisque.
+					Phasellus at risus purus. Vivamus suscipit magna quis nibh dictum consectetur.
+					Sed a lorem est, quis dictum urna. Sed sapien magna, congue a auctor et, dapibus et
+					tellus. Mauris sapien elit, venenatis quis ornare at, interdum et urna.
+					Vivamus sollicitudin fermentum lacus.</p>
+				</div>
+				<hr/>
+				</section>
+				<aside>
+					<div class = "aside-title">
+						<h3>You may like...</h3>
+						<img src = "images/icons/golder_offer2.png"/>
+					</div>
+					<div class = "aside-item">
+						<img src = "images/block-home/img2.png"  alt = "Royale curtains"/>
+						<p class = "current">Royale Curtains <span class = "price"><span class = "currency_all">£</span><span class = "summ">129.99</span></span></p>
+					</div>
+					<div class = "aside-item">
+						<img src = "images/block-home/img6.png"  alt = "Zebra Rug"/>
+						<p class = "current">Claire Aitch Zebra Rug <span class = "price"><span class = "currency_all">£</span><span class = "summ">129.99</span></span></p>
+					</div>
+					<div class = "aside-item">
+						<img src = "images/block-home/img7.png"  alt = "Pine Wood"/>
+						<p class = "current">Real Pine Wood Flooring <span class = "price"><span class = "currency_all">£</span><span class = "summ">129.99</span></span></p>
+					</div>
+				</aside>
+			</div>
+			<hr class = "bottom-separate-line"/>
+		</section>
+		<section class = "bottom">
+			<div class = "bottom-center">
+				<div>
+					<h2>Information</h2>
+						<ul>
+							<li>Contact Us</li>
+							<li>Delivery</li>
+							<li>Returns</li>
+							<li>Terms and Conditions</li>
+							<li>Privacy Policy</li>
+							<li>About Us</li>
+						</ul>
+				</div>
+				<div>
+					<h2>Your account</h2>
+						<ul>
+							<li>Log In</li>
+							<li>Create an Account</li>
+							<li>Order History</li>
+							<li>Wish List</li>
+							<li>Cancel Account</li>
+							<li>Newsletter Subscriptions</li>
+						</ul>
+				</div>
+				<div>
+					<h2>Contacts</h2>
+					<p>Fabrique Fine Furnishing
+					<br/>
+					308-310 Somewhere Road,
+					<br/>
+					Devon,  PL9 1DD.
+					<br/>
+					<br/>
+					Telephone: +44 01752 000000
+					E-mail: <u>mail@yoursite.com</u></p>
+				</div>
+				<div class = "free-delivery">
+					<h2>Free delivery</h2>
+					<h5>On all orders over £159.99</h5>
+					<p>Valid on all of our stocked items.</p>
+					<img src = "images/icons/paypal.png" alt = "paypal"/>
+					<img src = "images/icons/Visa.png" alt = "visa"/>
+					<img src = "images/icons/Mastercard.png" alt = "mastercard"/>
+					<img src = "images/icons/Discover.png" alt = "discover"/>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class = "footer-center">
+				<div>
+					<h2>Fabrique</h2>
+					<h4>Fine furnishings</h4>
+					<p>&copy; All Rights Reserved</p>
+				</div>
+				<div>
+					<img src = "images/icons/Facebook.png" alt = "facebook"/>
+					<img src = "images/icons/Twitter.png" alt = "twitter"/>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src = "scripts/basket.js"></script>
+	<script>
+		function CalcSum() {
+			var selectOpt = document.getElementById("select_quantity").value,
+			price = document.getElementById("price"),
+			item = document.getElementById("article-price").innerHTML;			
+			price.innerHTML = (selectOpt*item).toFixed(2);
+		}
+		CalcSum();	
+	</script>
+</body>
+</html>
